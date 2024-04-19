@@ -1,5 +1,9 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
+
+//@ts-ignore
 import reactLogo from './assets/react.svg'
+
+
 import './App.css'
 
 function App() {
