@@ -4,7 +4,9 @@
   "version": "0.1.0-rc.1",
   "type": "module",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "module": "./dist/react-vite-library.es.js",
   "scripts": {
     "dev": "vite",
@@ -39,6 +41,7 @@
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",
+    "rimraf": "^5.0.5",
     "storybook": "^7.6.17",
     "typescript": "^4.9.5",
     "vite": "^4.1.4",

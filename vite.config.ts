@@ -8,7 +8,6 @@ import tsConfigPaths from 'vite-tsconfig-paths'
 //const { EsLinter, linterPlugin } = EsLint
 import * as packageJson from './package.json'
 
-Object.keys(packageJson).forEach(key => console.log("***** key: "+key));
 // https://vitejs.dev/config/
 export default defineConfig((configEnv) => ({
   plugins: [
@@ -19,7 +18,7 @@ export default defineConfig((configEnv) => ({
     //   linters: [new EsLinter({ configEnv })],
     // }),
     dts({
-      include: ['src/component/'],
+      include: ['lib'],
     }),
   ],
   build: {
@@ -31,6 +30,12 @@ export default defineConfig((configEnv) => ({
     },
     rollupOptions: {
       external: [...Object.keys(packageJson.peerDependencies)],
+      onwarn(warning, warn) {
+        if (warning.code === "MODULE_LEVEL_DIRECTIVE") {
+          return;
+        }
+        warn(warning);
+      },
     },
   },
 }))
