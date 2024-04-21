@@ -18,7 +18,7 @@ https://medium.com/wesionary-team/react-component-library-with-vite-and-deploy-i
 Step 1: Create react project using vite
 npm init vite@latest react-vite-library -- --template react-ts
 
-Replace latest with 4.0.0 and run command. Required vite scripts can be installed using vite@4.0.0 but not vite@4.1.4. 
-Edit package.json and change vite and typescript versions to vite@4.1.4 and typescript@4.9.5 once the vite scripts complete.
-Delete node_modules and rrun 'npm install'.
-In node_modules go into @types/glob and @types/minimatch. Delete the index.d.ts file in both folders. If these files aren't deleted errors are generated when 'npm run build' is executed. This page explains the issue and the fix: https://github.com/isaacs/rimraf/issues/264
+1. Replace latest with 4.0.0 and run command. Required vite scripts can be installed using vite@4.0.0 but not vite@4.1.4. 
+2. Edit package.json and change vite and typescript versions to vite@4.1.4 and typescript@4.9.5 once the vite scripts complete.
+3. Delete node_modules and rrun 'npm install'.
+4. In node_modules go into @types/glob and @types/minimatch. Delete the index.d.ts file in both folders. If these files aren't deleted errors are generated when 'npm run build' is executed. This page explains the issue and the fix: https://github.com/isaacs/rimraf/issues/264
